@@ -1,10 +1,10 @@
 return_search_file=$({
                find ~/Downloads -type f;
                find ~/Documents -type f;
-               find ~/Purdue\ University -type f;
+               find ~/Purdue -type f;
                find ~/Desktop -type f;
                find ~/coding -type f;
-               find ~/.dotfiles -type f;
+               find ~/dotfiles -type f;
              } | fzf --height=90%)
 
 if [ -z $return_search_file ] # check if the file name is an empty string, such as, ctrl-c will cause an empty string
