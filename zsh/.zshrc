@@ -124,9 +124,9 @@ export DBUS_SESSION_BUS_ADDRESS='unix:path='$DBUS_LAUNCHD_SESSION_BUS_SOCKET
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # my alias
-alias f="source ~/.dotfiles/script/.script/myfzf.sh"  # find my customize directory under home
+alias f="source ~/dotfiles/script/.script/myfzf.sh"  # find my customize directory under home
 alias fu="fzf --height=90%"  # find under current directory
-alias initgradle="~/.dotfiles/script/.script/init_gradle.sh"
+alias initgradle="~/dotfiles/script/.script/init_gradle.sh"
 alias vi="nvim"
 alias python="python3"
-alias hwtemplate="~/.dotfiles/script/.script/cs251_hwtemplate.sh"
+alias hwtemplate="~/dotfiles/script/.script/cs251_hwtemplate.sh"
