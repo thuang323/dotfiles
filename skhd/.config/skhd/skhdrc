@@ -9,6 +9,9 @@ alt - l : yabai -m window --focus east
 alt - s: yabai -m display --focus west
 alt - g: yabai -m display --focus east
 
+# lock screen macro
+shift + alt - q : skhd -k "ctrl + cmd - q"
+
 
 # rotate layout clockwise
 shift + alt - r : yabai -m space --rotate 270
