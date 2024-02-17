@@ -1,4 +1,4 @@
-return_search_file=$({
+find_file=$({
                # find ~/Downloads -type f;
                # find ~/Documents -type f;
                find ~/Purdue -type f;
@@ -8,16 +8,15 @@ return_search_file=$({
                find ~/Notes -type f;
              } | fzf --height=90%)
 
-if [ -z $return_search_file ] # check if the file name is an empty string, such as, ctrl-c will cause an empty string
-then
+if [[ -z $find_file ]]; then # check if the file name is an empty string, such as, ctrl-c will cause an empty string
   return
 fi
 
 
-dir_name=$(dirname $return_search_file) # get the directory name of the found file
+dir_name=$(dirname $find_file) # get the directory name of the found file
 
-if [ -d $dir_name ]  # checking if it is not a valid directory name
-then
+if [[ -d $dir_name ]]; then  # checking if it is not a valid directory name
+  cd ~
   cd $dir_name
 else
   return
