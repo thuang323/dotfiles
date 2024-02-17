@@ -4,5 +4,3 @@
 cd ~/dotfiles
 stow "stuff"
 ```
-
-testing
