@@ -1,37 +1,14 @@
+# when updating any keybinds, run the following lines on terminal
+# skhd --reload
+# skhd --restart-service
+
+
+
 # change window focus within space
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - h : yabai -m window --focus west
 alt - l : yabai -m window --focus east
-
-
-#change focus between external displays (left and right)
-alt - s: yabai -m display --focus west
-alt - g: yabai -m display --focus east
-
-# lock screen macro
-shift + alt - q : skhd -k "ctrl + cmd - q"
-
-
-# rotate layout clockwise
-shift + alt - r : yabai -m space --rotate 270
-
-# flip along y-axis
-shift + alt - y : yabai -m space --mirror y-axis
-
-# flip along x-axis
-shift + alt - x : yabai -m space --mirror x-axis
-
-# toggle window float
-shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
-
-
-# maximize a window
-shift + alt - m : yabai -m window --toggle zoom-fullscreen
-
-# balance out tree of windows (resize to occupy same area)
-alt - e : yabai -m space --balance
-
 
 # swap windows
 shift + alt - j : yabai -m window --swap south
@@ -40,30 +17,57 @@ shift + alt - h : yabai -m window --swap west
 shift + alt - l : yabai -m window --swap east
 
 
-# move window and split
-ctrl + alt - j : yabai -m window --warp south
-ctrl + alt - k : yabai -m window --warp north
-ctrl + alt - h : yabai -m window --warp west
-ctrl + alt - l : yabai -m window --warp east
+# lock screen macro
+shift + alt - q : skhd -k "ctrl + cmd - q"
+
+# rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+
+# toggle window float
+shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# maximize a window
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+
+# balance out tree of windows (resize to occupy same area)
+alt - e : yabai -m space --balance
 
 
 # move window to display left and right
-shift + alt - s : yabai -m window --display west; yabai -m display --focus west;
-shift + alt - g : yabai -m window --display east; yabai -m display --focus east;
+cmd + shift - h : yabai -m window --display west; yabai -m display --focus west;
+cmd + shift - l : yabai -m window --display east; yabai -m display --focus east;
+
+# focus prev/next space
+alt - 0x21 : ~/.script/space_focus_prev.sh
+alt - 0x1E : ~/.script/space_focus_next.sh
+
+# focus prev/next display
+shift + alt - 0x21 : yabai -m display --focus prev
+shift + alt - 0x1E : yabai -m display --focus next
+
+# switch to prev space/display
+alt - 0 : yabai -m space --focus recent
+shift + alt - 0 : yabai -m display --focus recent
+
+# switch to space index
+alt - 1 : yabai -m space --focus 1;
+alt - 2 : yabai -m space --focus 2;
+alt - 3 : yabai -m space --focus 3;
+alt - 4 : yabai -m space --focus 4;
+alt - 5 : yabai -m space --focus 5;
+alt - 6 : yabai -m space --focus 6;
+alt - 7 : yabai -m space --focus 7;
+alt - 8 : yabai -m space --focus 8;
+alt - 9 : yabai -m space --focus 9;
 
 
-#move window to prev and next space
-shift + alt - p : yabai -m window --space prev;
-shift + alt - n : yabai -m window --space next;
+# increase window size
+shift + alt - 0x2B : yabai -m window --resize left:-10:0
+shift + alt - 0x2F : yabai -m window --resize right:10:0
 
-# move window to space #
-shift + alt - 1 : yabai -m window --space 1;
-shift + alt - 2 : yabai -m window --space 2;
-shift + alt - 3 : yabai -m window --space 3;
-shift + alt - 4 : yabai -m window --space 4;
-shift + alt - 5 : yabai -m window --space 5;
-shift + alt - 6 : yabai -m window --space 6;
-# shift + alt - 7 : yabai -m window --space 7;
+# # decrease window size
+alt - 0x2B : yabai -m window --resize left:10:0
+alt - 0x2F : yabai -m window --resize right:-10:0
 
 
 # stop/start/restart yabai
