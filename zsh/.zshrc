@@ -124,11 +124,11 @@ export DBUS_SESSION_BUS_ADDRESS='unix:path='$DBUS_LAUNCHD_SESSION_BUS_SOCKET
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # my alias
-alias ff="source ~/dotfiles/script/.script/find_files.sh"  # find my target files under home in specific directory
-alias fuf="source ~/dotfiles/script/.script/find_under_files.sh"  # find all files under current directory
-alias fdir="source ~/dotfiles/script/.script/find_directory.sh"  # find all directory under home in specific directory
-alias fudir="source ~/dotfiles/script/.script/find_under_directory.sh"  # find all directory under current directory
-alias initgradle="~/dotfiles/script/.script/init_gradle.sh"
+alias ff="source ~/.script/find_files.sh"  # find my target files under home in specific directory
+alias fuf="source ~/.script/find_under_files.sh"  # find all files under current directory
+alias fd="source ~/.script/find_directory.sh"  # find all directory under home in specific directory
+alias fud="source ~/.script/find_under_directory.sh"  # find all directory under current directory
+alias initgradle="~/.script/init_gradle.sh"
 alias stat355="~/dotfiles/script/.script/stat355.sh"
 alias vi="nvim"
 alias python="python3"
