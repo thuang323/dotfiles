@@ -1,0 +1,35 @@
+# https://starship.rs/config/
+
+format = '$all'
+
+add_newline = false
+
+[package]
+disabled = true
+
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
+
+[line_break]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[[battery.display]]
+threshold = 10
+style = 'bold red'
+
+[[battery.display]]
+threshold = 30
+style = 'bold yellow'
+
+[git_branch]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[memory_usage]
+symbol = " "
