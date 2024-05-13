@@ -37,6 +37,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+# toggleterm autosuggestions fg color
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7b8496"
 
 
 # User configuration

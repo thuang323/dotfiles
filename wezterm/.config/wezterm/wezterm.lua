@@ -78,8 +78,10 @@ wezterm.on(
 -- window and tab
 -- config.window_background_opacity = 0.90
 -- config.window_background_opacity = 0.92
-config.window_background_opacity = 0.94
-config.macos_window_background_blur = 20
+config.window_background_opacity = 0.93
+-- config.window_background_opacity = 0.94
+-- config.macos_window_background_blur = 20
+config.macos_window_background_blur = 25
 config.enable_scroll_bar = false
 config.hide_tab_bar_if_only_one_tab = false
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
@@ -98,12 +100,15 @@ config.window_padding = {
 
 
 -- font
+-- use the below line to check font type
+-- wezterm ls-fonts --list-system
 config.adjust_window_size_when_changing_font_size = false
 config.font_size = 14
 config.cell_width = 0.95
 config.font = wezterm.font_with_fallback {
   { family = "SFMono Nerd Font", weight = "Medium" },
-  { family = "JetBrains Mono", stretch = "Condensed", weight = "Medium" },
+  { family = "JetBrains Mono",   stretch = "Condensed", weight = "Medium" },
+  { family = "SF Pro" },
   -- { family = "Hack Nerd Font", weight = "Regular" },
 }
 

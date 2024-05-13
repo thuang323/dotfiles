@@ -1,6 +1,27 @@
 # https://starship.rs/config/
 
-format = '$all'
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$jobs\
+$battery\
+$status\
+$character"""
 
 add_newline = false
 
