@@ -76,21 +76,17 @@ wezterm.on(
 )
 
 -- window and tab
--- config.window_background_opacity = 0.90
--- config.window_background_opacity = 0.92
 config.window_background_opacity = 0.93
--- config.window_background_opacity = 0.94
--- config.macos_window_background_blur = 20
 config.macos_window_background_blur = 25
-config.enable_scroll_bar = false
-config.hide_tab_bar_if_only_one_tab = false
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
-config.tab_bar_at_bottom = false
+-- config.enable_scroll_bar = false
+-- config.hide_tab_bar_if_only_one_tab = false
+-- config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+-- config.tab_bar_at_bottom = false
 config.enable_scroll_bar = true
--- config.hide_tab_bar_if_only_one_tab = true
--- config.window_decorations = "RESIZE"
--- config.tab_bar_at_bottom = true
--- config.show_tab_index_in_tab_bar = true
+config.hide_tab_bar_if_only_one_tab = true
+config.window_decorations = "RESIZE"
+config.tab_bar_at_bottom = true
+config.show_tab_index_in_tab_bar = true
 config.window_padding = {
   bottom = 6,
   top    = 6,
@@ -150,7 +146,6 @@ config.keys = {
   { key = "c",         mods = "SUPER",       action = act.CopyTo "Clipboard" },
   { key = "v",         mods = "SUPER",       action = act.PasteFrom "Clipboard" },
   { key = "k",         mods = "SUPER",       action = act.ClearScrollback "ScrollbackOnly" },
-  -- { key = "v",         mods = "ALT",         action = act.ActivateCopyMode },
   { key = "x",         mods = "SHIFT|CTRL",  action = act.ActivateCopyMode },
   { key = "p",         mods = "SHIFT|SUPER", action = act.ActivateCommandPalette },
   { key = "f",         mods = "SUPER",       action = act.Search "CurrentSelectionOrEmptyString" },

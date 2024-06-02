@@ -64,4 +64,5 @@ alias python="python3"
 alias g++="g++-13"
 alias gcc="gcc-13"
 alias clang++="clang++ --std=c++20" 
-
+alias ta="tmux attach"
+alias tn="tmux new"
