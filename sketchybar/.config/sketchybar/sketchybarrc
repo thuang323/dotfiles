@@ -18,8 +18,16 @@ ITEM_DIR="$CONFIG_DIR/items"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
+# sketchybar --bar position=top \
+#                  height=25 \
+#                  blur_radius=5 \
+#                  padding_left=5  \
+#                  padding_right=5 \
+#                  color=$BAR_COLOR
+
+
 sketchybar --bar position=top \
-                 height=25 \
+                 height=20 \
                  blur_radius=5 \
                  padding_left=5  \
                  padding_right=5 \
@@ -31,11 +39,28 @@ sketchybar --bar position=top \
 # https://felixkratz.github.io/SketchyBar/config/items
 
 
+# default=(
+#   padding_left=5
+#   padding_right=5
+#   icon.font="SF Pro:bold:12.5"
+#   label.font="SF Pro:bold:12.5"
+#   icon.color=$WHITE
+#   label.color=$WHITE
+#   icon.padding_left=5
+#   icon.padding_right=3
+#   label.padding_left=3
+#   label.padding_right=5
+#   background.color=$ITEM_BG_COLOR
+#   background.corner_radius=5
+#   background.height=20
+# )
+
+
 default=(
   padding_left=5
   padding_right=5
-  icon.font="SF Pro:bold:12.5"
-  label.font="SF Pro:bold:12.5"
+  icon.font="SF Pro:bold:11.5"
+  label.font="SF Pro:bold:11.5"
   icon.color=$WHITE
   label.color=$WHITE
   icon.padding_left=5
@@ -44,8 +69,9 @@ default=(
   label.padding_right=5
   background.color=$ITEM_BG_COLOR
   background.corner_radius=5
-  background.height=20
+  background.height=15
 )
+
 sketchybar --default "${default[@]}"
 
 # Adding Right Items
@@ -54,7 +80,7 @@ source $ITEM_DIR/front_app.sh
 
 
 # Adding left/right/center side of Notch items
-source $ITEM_DIR/media.sh
+# source $ITEM_DIR/media.sh
 
 # Adding Right Items
 source $ITEM_DIR/calendar.sh
