@@ -4,7 +4,7 @@ file_name=$({
 
 if [[ -z $file_name ]] # check if the file name is an empty string, such as, ctrl-c will cause an empty string
 then
-  return
+  exit 0
 fi
 
 
@@ -14,5 +14,5 @@ if [[ -d $dir_name ]]  # checking if it is not a valid directory name
 then
   cd $dir_name
 else
-  return
+  exit 0
 fi

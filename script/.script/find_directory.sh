@@ -1,4 +1,5 @@
 dir_name=$({
+  echo ~/;
   find ~/Purdue -type d;
   find ~/resume -type d;
   find ~/coding -type d;
@@ -8,8 +9,7 @@ dir_name=$({
 
 
 if [[ -z $dir_name ]]; then
-  return
+  exit 0
 fi
 
-cd ~
 cd "$dir_name"
