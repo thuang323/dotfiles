@@ -38,8 +38,8 @@ cmd + shift - h : yabai -m window --display west; yabai -m display --focus west;
 cmd + shift - l : yabai -m window --display east; yabai -m display --focus east;
 
 # focus prev/next space
-alt - 0x21 : ~/.script/space_focus_prev.sh
-alt - 0x1E : ~/.script/space_focus_next.sh
+alt - 0x21 : ~/.script/yabai/space_focus_prev.sh
+alt - 0x1E : ~/.script/yabai/space_focus_next.sh
 
 # focus prev/next display
 shift + alt - 0x21 : yabai -m display --focus prev
