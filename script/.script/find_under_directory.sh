@@ -3,7 +3,7 @@ dir_name=$({
 } | fzf --height=90%)
 
 if [[ -z $dir_name ]]; then
-  exit 0
+  return
 fi
 
 cd "$dir_name"
