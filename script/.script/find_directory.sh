@@ -1,7 +1,9 @@
 dir_name=$({
   echo ~/;
+  echo ~/Downloads/;
+  echo ~/Desktop/;
+  echo ~/resume/;
   find ~/Purdue -type d;
-  find ~/resume -type d;
   find ~/coding -type d;
   find ~/dotfiles -type d;
   find ~/Notes -type d;
@@ -9,7 +11,7 @@ dir_name=$({
 
 
 if [[ -z $dir_name ]]; then
-  exit 0
+  return
 fi
 
 cd "$dir_name"

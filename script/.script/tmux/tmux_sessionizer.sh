@@ -5,8 +5,10 @@ if [[ $# -eq 1 ]]; then
 else
   selected=$({
     echo ~/;
+    echo ~/Downloads/;
+    echo ~/Desktop/;
+    echo ~/resume/;
     find ~/Purdue -type d;
-    find ~/resume -type d;
     find ~/coding -type d;
     find ~/dotfiles -type d;
     find ~/Notes -type d;

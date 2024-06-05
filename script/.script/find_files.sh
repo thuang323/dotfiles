@@ -10,7 +10,7 @@ find_file=$({
 
 # check if the file name is an empty string, such as, ctrl-c will cause an empty string
 if [[ -z $find_file ]]; then
-  exit 0
+  return
 fi
 
 
@@ -19,5 +19,5 @@ dir_name=$(dirname $find_file) # get the directory name of the found file
 if [[ -d $dir_name ]]; then  # checking if it is not a valid directory name
   cd "$dir_name"
 else
-  exit 0
+  return
 fi
