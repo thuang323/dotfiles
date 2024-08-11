@@ -48,6 +48,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7b8496"
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export DBUS_SESSION_BUS_ADDRESS='unix:path='$DBUS_LAUNCHD_SESSION_BUS_SOCKET
+export PATH=/usr/local/anaconda3/bin:$PATH
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -60,7 +61,6 @@ alias fd="source ~/.script/find_directory.sh"  # find all directory under home i
 alias fud="source ~/.script/find_under_directory.sh"  # find all directory under current directory
 alias initgradle="~/.script/init_gradle.sh"
 alias vi="nvim"
-alias python="python3"
 alias g++="g++-13"
 alias gcc="gcc-13"
 alias clang++="clang++ --std=c++20" 
@@ -68,3 +68,27 @@ alias ta="tmux attach"
 alias tn="tmux new"
 alias tls="tmux ls"
 alias ts="source ~/.script/tmux/tmux_sessionizer.sh"
+
+
+# python environment
+alias python="python3"
+alias pip="pip3"
+alias lsconda="conda env list"
+alias rmconda="source ~/.script/rmconda.sh"
+alias initconda="source ~/.script/initconda.sh"
+# >>> conda initialize >>>
+#
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

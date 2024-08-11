@@ -10,6 +10,7 @@ $git_state\
 $git_metrics\
 $git_status\
 $hg_branch\
+$python\
 $docker_context\
 $package\
 $conda\
@@ -54,3 +55,7 @@ symbol = " "
 
 [memory_usage]
 symbol = " "
+
+[python]
+disabled = false
+format = '[(\($virtualenv\) )]($style)'
