@@ -3,7 +3,6 @@
 # skhd --restart-service
 
 
-
 # change window focus within space
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
@@ -24,7 +23,8 @@ shift + alt - q : skhd -k "ctrl + cmd - q"
 shift + alt - r : yabai -m space --rotate 270
 
 # toggle window float
-shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+# shift + alt - t : yabai -m window --toggle float --grid 8:8:1:1:6:6
+shift + alt - t : yabai -m window --toggle float --grid 10:10:1:1:8:8
 
 # maximize a window
 shift + alt - m : yabai -m window --toggle zoom-fullscreen
@@ -59,6 +59,18 @@ alt - 6 : yabai -m space --focus 6;
 alt - 7 : yabai -m space --focus 7;
 alt - 8 : yabai -m space --focus 8;
 alt - 9 : yabai -m space --focus 9;
+
+
+# move window to space index
+shift + alt - 1 : yabai -m window --space 1 --focus;
+shift + alt - 2 : yabai -m window --space 2 --focus;
+shift + alt - 3 : yabai -m window --space 3 --focus;
+shift + alt - 4 : yabai -m window --space 4 --focus;
+shift + alt - 5 : yabai -m window --space 5 --focus;
+shift + alt - 6 : yabai -m window --space 6 --focus;
+shift + alt - 7 : yabai -m window --space 7 --focus;
+shift + alt - 8 : yabai -m window --space 8 --focus;
+shift + alt - 9 : yabai -m window --space 9 --focus;
 
 
 # increase window size

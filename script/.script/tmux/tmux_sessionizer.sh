@@ -16,7 +16,11 @@ else
 fi
 
 if [[ -z $selected ]]; then
+  if [[ -z $TMUX ]]; then
+    return
+  else
     exit 0
+  fi
 fi
 
 selected_name=$(basename "$selected" | tr . _)
@@ -28,8 +32,12 @@ if [[ $selected_name = "taylorhuang" ]]; then
 fi
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s "$selected_name" -c "$selected"
+  tmux new-session -s "$selected_name" -c "$selected"
+  if [[ -z $tmux_running ]]; then
+    return
+  else
     exit 0
+  fi
 fi
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then

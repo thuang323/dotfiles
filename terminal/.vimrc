@@ -21,4 +21,3 @@ let g:netrw_liststyle = 3
 
 "remap key
 inoremap jk <esc>
-
