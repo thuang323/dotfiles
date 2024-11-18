@@ -1,3 +1,19 @@
+# >>> conda initialize >>>
+#
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -46,19 +62,26 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7b8496"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 
+export EDITOR=nvim
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export DBUS_SESSION_BUS_ADDRESS='unix:path='$DBUS_LAUNCHD_SESSION_BUS_SOCKET
-export PATH=/usr/local/anaconda3/bin:$PATH
+# export PATH=/usr/local/anaconda3/bin:$PATH # for intel mac
+# export PATH=/opt/homebrew/anaconda3/bin:$PATH # for m series mac
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+export LDFLAGS="-L/usr/local/opt/llvm/lib -L/usr/local/opt/llvm/lib/c++ -L/usr/local/opt/llvm/lib -lunwind"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(starship init zsh)"
 
 # my alias
-alias ff="source ~/.script/find_files.sh"  # find my target files under home in specific directory
-alias fuf="source ~/.script/find_under_files.sh"  # find all files under current directory
-alias fd="source ~/.script/find_directory.sh"  # find all directory under home in specific directory
-alias fud="source ~/.script/find_under_directory.sh"  # find all directory under current directory
+alias sf="source ~/.script/find_files.sh"  # find my target files under home in specific directory
+alias suf="source ~/.script/find_under_files.sh"  # find all files under current directory
+alias sd="source ~/.script/find_directory.sh"  # find all directory under home in specific directory
+alias sud="source ~/.script/find_under_directory.sh"  # find all directory under current directory
 alias initgradle="~/.script/init_gradle.sh"
 alias vi="nvim"
 alias g++="g++-13"
@@ -70,25 +93,9 @@ alias tls="tmux ls"
 alias ts="source ~/.script/tmux/tmux_sessionizer.sh"
 
 
-# python environment
+# python alias
 alias python="python3"
 alias pip="pip3"
 alias lsconda="conda env list"
 alias rmconda="source ~/.script/rmconda.sh"
 alias initconda="source ~/.script/initconda.sh"
-# >>> conda initialize >>>
-#
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-

@@ -111,7 +111,7 @@ config.font = wezterm.font_with_fallback {
 
 -- colors
 config.bold_brightens_ansi_colors = "No"
-config.colors = {
+config.colors = { -- cyberdream
   ansi = colors.ansi,
   brights = colors.brights,
   background = colors.bg,
@@ -127,6 +127,22 @@ config.colors = {
   visual_bell = colors.selection_bg,
   indexed = colors.indexed,
 }
+
+-- config.colors = { -- tokyonight day
+--   ansi = colors.ansi,
+--   brights = colors.brights,
+--   background = colors.background,
+--   foreground = colors.foreground,
+--   selection_bg = colors.selection_bg,
+--   selection_fg = colors.selection_fg,
+--   cursor_bg = colors.cursor_bg,
+--   cursor_fg = colors.cursor_fg,
+--   cursor_border = colors.cursor_border,
+--   scrollbar_thumb = colors.scrollbar_thumb,
+--   split = colors.split,
+--   visual_bell = colors.selection_bg,
+--   compose_cursor = colors.compose_cursor,
+-- }
 
 
 -- keys
@@ -169,13 +185,22 @@ config.keys = {
   { key = "9",         mods = "SUPER",       action = act.ActivateTab(-1) },
 
   -- other
-  { key = "l",         mods = "SHIFT|CTRL",  action = act.ShowDebugOverlay },
-  -- { key = "Backspace", mods = "SUPER",       action = act.SendString "\x15" },
-  { key = "Backspace", mods = "SUPER",       action = act.SendKey { key = "u", mods = "CTRL" } },
-  { key = "j",         mods = "SUPER",       action = act.SendKey { key = "\\", mods = "ALT" } },
-  { key = "b",         mods = "SUPER",       action = act.SendKey { key = "b", mods = "ALT" } },
-  { key = "a",         mods = "SUPER",       action = act.SendKey { key = "a", mods = "ALT" } },
-  { key = "/",         mods = "SUPER",       action = act.SendKey { key = "/", mods = "ALT" } },
+  { key = "l", mods = "SHIFT|CTRL", action = act.ShowDebugOverlay },
+  { key = "Backspace", mods = "SUPER", action = act.SendString "\x15" },
+  { key = "b", mods = "SUPER", action = act.SendString "\x1bsb" },
+  { key = "j", mods = "SUPER", action = act.SendString "\x1bsj" },
+  { key = "/", mods = "SUPER", action = act.SendString "\x1bs/" },
+  { key = "[", mods = "SUPER", action = act.SendString "\x1bs[" },
+  { key = "]", mods = "SUPER", action = act.SendString "\x1bs]" },
+  { key = "a", mods = "SUPER", action = act.SendString "\x1bsa" },
+  { key = "k", mods = "SUPER", action = act.SendString "\x1bsk" },
+  -- { key = "l",         mods = "SHIFT|CTRL",  action = act.ShowDebugOverlay },
+  -- -- { key = "Backspace", mods = "SUPER",       action = act.SendString "\x15" },
+  -- { key = "Backspace", mods = "SUPER",       action = act.SendKey { key = "u", mods = "CTRL" } },
+  -- { key = "j",         mods = "SUPER",       action = act.SendKey { key = "\\", mods = "ALT" } },
+  -- { key = "b",         mods = "SUPER",       action = act.SendKey { key = "b", mods = "ALT" } },
+  -- { key = "a",         mods = "SUPER",       action = act.SendKey { key = "a", mods = "ALT" } },
+  -- { key = "/",         mods = "SUPER",       action = act.SendKey { key = "/", mods = "ALT" } },
 }
 
 

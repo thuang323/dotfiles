@@ -1,12 +1,21 @@
+# Define the directories to exclude in an array
+EXCLUDE_DIRS=('*/.git' '*/.undodir' '*/node_modules' '*/.next')
+
+EXCLUDE_ARGS=()
+for dir in "${EXCLUDE_DIRS[@]}"; do
+  EXCLUDE_ARGS+=(-path "$dir" -o)
+done
+
 dir_name=$({
   echo ~/;
   echo ~/Downloads/;
   echo ~/Desktop/;
   echo ~/resume/;
-  find ~/Purdue -type d;
-  find ~/coding -type d;
-  find ~/dotfiles -type d;
-  find ~/Notes -type d;
+  echo ~/test/;
+  echo ~/dotfiles/;
+  find ~/Purdue -maxdepth 3 -type d;
+  find ~/coding -maxdepth 2 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
+  find ~/dotfiles -mindepth 1 -maxdepth 3 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
 } | fzf --height=90%)
 
 

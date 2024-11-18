@@ -1,7 +1,5 @@
 # when updating any keybinds, run the following lines on terminal
-# skhd --reload
-# skhd --restart-service
-
+# skhd -r
 
 # change window focus within space
 alt - j : yabai -m window --focus south
@@ -16,8 +14,10 @@ shift + alt - h : yabai -m window --swap west
 shift + alt - l : yabai -m window --swap east
 
 
-# lock screen macro
-shift + alt - q : skhd -k "ctrl + cmd - q"
+# mapping A keybind to B keybind
+shift + alt - q : skhd -k "ctrl + cmd - q" # lock screen macro
+alt - b : skhd -k "alt - 0x7B" # jump backward a word
+alt - f : skhd -k "alt - 0x7C" # jump forward a word
 
 # rotate layout clockwise
 shift + alt - r : yabai -m space --rotate 270
@@ -30,18 +30,18 @@ shift + alt - t : yabai -m window --toggle float --grid 10:10:1:1:8:8
 shift + alt - m : yabai -m window --toggle zoom-fullscreen
 
 # balance out tree of windows (resize to occupy same area)
-alt - e : yabai -m space --balance
+alt - 0x18 : yabai -m space --balance
 
 
 # move window to display left and right
-cmd + shift - h : yabai -m window --display west; yabai -m display --focus west;
-cmd + shift - l : yabai -m window --display east; yabai -m display --focus east;
+ctrl + alt - h : yabai -m window --display west; yabai -m display --focus west;
+ctrl + alt - l : yabai -m window --display east; yabai -m display --focus east;
 
 # focus prev/next space
 alt - 0x21 : ~/.script/yabai/space_focus_prev.sh
 alt - 0x1E : ~/.script/yabai/space_focus_next.sh
 
-# focus prev/next display
+# focus left/right display
 shift + alt - 0x21 : yabai -m display --focus prev
 shift + alt - 0x1E : yabai -m display --focus next
 

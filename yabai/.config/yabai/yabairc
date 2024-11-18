@@ -55,6 +55,8 @@ yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="^AlDente$" manage=off
 yabai -m rule --add app="^MonitorControl$" manage=off
 yabai -m rule --add app="^AppCleaner$" manage=off
+yabai -m rule --add app="^QuickTime Player" manage=off
+yabai -m rule --add app="^VLC" manage=off
 yabai -m rule --add app="^Digital Color Meter$" manage=off
 yabai -m rule --add app="^Keyboard Setup Assistant$" manage=off
 yabai -m rule --add app="^zoom.us$" manage=off
