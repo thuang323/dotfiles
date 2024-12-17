@@ -1,14 +1,19 @@
-# Mac setup
+# ✨ My Mac setup!!!
 
-## Installation
+## 🖼️ Image
 
-#### Homebrew
+<img width="1440" alt="dotfiles" src="https://github.com/user-attachments/assets/b5ae2058-ea15-43c3-9826-64da447b5a09" />
+
+
+## 📦 Installation
+
+### Homebrew
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-#### Oh My Zsh
+### Oh My Zsh
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -16,7 +21,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-#### Dependencies
+### Dependencies
 
 ```bash
 xcode-select --install
@@ -31,7 +36,7 @@ brew install jq
 brew install gradle
 ```
 
-#### Git
+### Git
 
 ```bash
 brew install git
@@ -44,7 +49,7 @@ brew install gh       # github cli
 gh auth login
 ```
 
-#### Tmux
+### Tmux
 
 ```bash
 brew installtmux
@@ -52,7 +57,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # ctrl + I to install all plugins
 ```
 
-#### Window Manager & SketchyBar
+### Window Manager & SketchyBar
 
 ```bash
 brew install koekeishiya/formulae/yabai
@@ -62,7 +67,7 @@ brew tap FelixKratz/formulae
 brew install sketchybar
 ```
 
-#### Fonts
+### Fonts
 
 ```bash
 brew tap epk/epk      # SFMono-Nerd-Font
@@ -76,14 +81,14 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.
 # go to sketchybar-app-font github to get the latest release
 ```
 
-#### Mac Utils
+### Mac Utils
 
 ```bash
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false # repeating key
 defaults write com.apple.dock autohide-time-modifier -float 0.15; killall Dock # show the dock faster
 ```
 
-## Stow Usage
+## 🚀 Stow Usage
 
 ```bash
 cd ~/dotfiles
@@ -92,7 +97,7 @@ stow "directory"
 stow --restow "directory" # for restowing
 ```
 
-## Developer tools
+## 🛠️ Developer tools
 
 - Arc (web browser)
 - Wezterm
@@ -103,7 +108,7 @@ stow --restow "directory" # for restowing
 - MacTex
   - [MacTex download page](https://tug.org/mactex/)
 
-## Utilities app
+## 💧 Utility apps
 
 - RayCast
 - AltTab
