@@ -52,7 +52,7 @@ gh auth login
 ### Tmux
 
 ```bash
-brew installtmux
+brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # ctrl + I to install all plugins
 ```
