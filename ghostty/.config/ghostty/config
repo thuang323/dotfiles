@@ -1,0 +1,55 @@
+# fonts
+font-family = "SFMono Nerd Font"
+font-family = "JetBrainsMonoNL Nerd Font Mono"
+font-style = "Medium"
+font-style-bold = "Bold"
+font-style-italic = "Medium Italic"
+font-style-bold-italic = "Bold Italic"
+font-size = 15
+adjust-cell-width = -7%
+
+
+# theme and background
+theme = cyberdream
+background-opacity = 0.94
+background-blur-radius = 23
+
+
+mouse-hide-while-typing = true
+
+
+# window
+window-inherit-working-directory = false
+window-decoration = true
+macos-titlebar-style = hidden
+macos-option-as-alt = true
+
+
+# icon
+macos-icon = official
+macos-icon-frame = plastic
+macos-icon-ghost-color = #4000A0
+macos-icon-screen-color = #7799FF
+
+
+# quick terminal
+quick-terminal-position = right
+quick-terminal-autohide = true
+
+
+# keybindings
+
+# other
+keybind = global:alt+t=toggle_quick_terminal
+keybind = all:super+backspace=text:\x15
+keybind = all:super+b=text:\x1bsb
+keybind = all:super+j=text:\x1bsj
+keybind = all:super+/=text:\x1bs/
+keybind = all:super+left_bracket=text:\x1bs[
+keybind = all:super+right_bracket=text:\x1bs]
+keybind = all:super+a=text:\x1bsa
+keybind = all:super+k=text:\x1bsk
+
+# tmux
+keybind = all:super+r=text:\x01S
+keybind = all:super+l=text:\x01L
