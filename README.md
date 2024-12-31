@@ -26,6 +26,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ```bash
 xcode-select --install
 brew install --cask wezterm
+brew install --cask ghostty
 brew install neovim
 brew install ripgrep
 brew install fzf
@@ -74,6 +75,7 @@ brew tap epk/epk      # SFMono-Nerd-Font
 brew install font-sf-mono-nerd-font
 
 brew install --cask font-sf-pro
+brew install --cask font-jetbrains-mono-nerd-font
 
 # SketchyBar usage
 brew install --cask sf-symbols
@@ -101,6 +103,7 @@ stow --restow "directory" # for restowing
 
 - Arc (web browser)
 - Wezterm
+- Ghostty
 - VsCode
 - Docker Desktop
 - Postman

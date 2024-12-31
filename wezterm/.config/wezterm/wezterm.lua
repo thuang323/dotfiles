@@ -102,9 +102,9 @@ config.adjust_window_size_when_changing_font_size = false
 config.font_size = 14
 config.cell_width = 0.95
 config.font = wezterm.font_with_fallback {
-  { family = "SFMono Nerd Font", weight = "Medium" },
-  { family = "JetBrains Mono",   stretch = "Condensed", weight = "Medium" },
-  { family = "SF Pro" },
+  { family = "SFMono Nerd Font",               weight = "Medium" },
+  { family = "JetBrainsMonoNL Nerd Font Mono", weight = "Medium" },
+  -- { family = "JetBrains Mono",   stretch = "Condensed", weight = "Medium" },
   -- { family = "Hack Nerd Font", weight = "Regular" },
 }
 
@@ -185,22 +185,19 @@ config.keys = {
   { key = "9",         mods = "SUPER",       action = act.ActivateTab(-1) },
 
   -- other
-  { key = "l", mods = "SHIFT|CTRL", action = act.ShowDebugOverlay },
-  { key = "Backspace", mods = "SUPER", action = act.SendString "\x15" },
-  { key = "b", mods = "SUPER", action = act.SendString "\x1bsb" },
-  { key = "j", mods = "SUPER", action = act.SendString "\x1bsj" },
-  { key = "/", mods = "SUPER", action = act.SendString "\x1bs/" },
-  { key = "[", mods = "SUPER", action = act.SendString "\x1bs[" },
-  { key = "]", mods = "SUPER", action = act.SendString "\x1bs]" },
-  { key = "a", mods = "SUPER", action = act.SendString "\x1bsa" },
-  { key = "k", mods = "SUPER", action = act.SendString "\x1bsk" },
-  -- { key = "l",         mods = "SHIFT|CTRL",  action = act.ShowDebugOverlay },
-  -- -- { key = "Backspace", mods = "SUPER",       action = act.SendString "\x15" },
-  -- { key = "Backspace", mods = "SUPER",       action = act.SendKey { key = "u", mods = "CTRL" } },
-  -- { key = "j",         mods = "SUPER",       action = act.SendKey { key = "\\", mods = "ALT" } },
-  -- { key = "b",         mods = "SUPER",       action = act.SendKey { key = "b", mods = "ALT" } },
-  -- { key = "a",         mods = "SUPER",       action = act.SendKey { key = "a", mods = "ALT" } },
-  -- { key = "/",         mods = "SUPER",       action = act.SendKey { key = "/", mods = "ALT" } },
+  { key = "l",         mods = "SHIFT|CTRL",  action = act.ShowDebugOverlay },
+  { key = "Backspace", mods = "SUPER",       action = act.SendString "\x15" },
+  { key = "b",         mods = "SUPER",       action = act.SendString "\x1bsb" },
+  { key = "j",         mods = "SUPER",       action = act.SendString "\x1bsj" },
+  { key = "/",         mods = "SUPER",       action = act.SendString "\x1bs/" },
+  { key = "[",         mods = "SUPER",       action = act.SendString "\x1bs[" },
+  { key = "]",         mods = "SUPER",       action = act.SendString "\x1bs]" },
+  { key = "a",         mods = "SUPER",       action = act.SendString "\x1bsa" },
+  { key = "k",         mods = "SUPER",       action = act.SendString "\x1bsk" },
+
+  -- tmux
+  { key = "r",         mods = "SUPER",       action = act.SendString "\x01S" },
+  { key = "l",         mods = "SUPER",       action = act.SendString "\x01L" },
 }
 
 
