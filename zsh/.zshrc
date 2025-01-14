@@ -90,7 +90,7 @@ alias clang++="clang++ --std=c++20"
 alias ta="tmux attach"
 alias tn="tmux new"
 alias tls="tmux ls"
-alias ts="source ~/.script/tmux/tmux_sessionizer.sh"
+alias ts="~/.script/tmux/tmux_sessionizer.sh"
 
 
 # python alias
