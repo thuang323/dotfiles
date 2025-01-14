@@ -12,19 +12,28 @@ done
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-  selected=$({
-    echo ~/;
-    echo ~/Downloads/;
-    echo ~/Desktop/;
-    echo ~/resume/;
-    echo ~/dotfiles/;
-    echo ~/test/;
-    find ~/Purdue -maxdepth 3 -type d;
-    # find ~/coding -maxdepth 2 -type d;
-    # find ~/dotfiles -mindepth 1 -maxdepth 3 -type d;
-    find ~/coding -maxdepth 2 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
-    find ~/dotfiles -mindepth 1 -maxdepth 3 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
-  } | fzf)
+  if [[ $HOME = "/Users/taylorhuang" ]]; then
+    selected=$({
+      echo ~/;
+      echo ~/Downloads/;
+      echo ~/Desktop/;
+      echo ~/resume/;
+      echo ~/dotfiles/;
+      echo ~/test/;
+      find ~/Purdue -maxdepth 3 -type d;
+      # find ~/coding -maxdepth 2 -type d;
+      # find ~/dotfiles -mindepth 1 -maxdepth 3 -type d;
+      find ~/coding -maxdepth 2 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
+      find ~/dotfiles -mindepth 1 -maxdepth 3 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
+    } | fzf)
+  else
+    selected=$({
+      echo ~/;
+      echo ~/Downloads/;
+      echo ~/dotfiles/;
+      find ~/dotfiles -mindepth 1 -maxdepth 3 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
+    } | fzf)
+  fi
 fi
 
 if [[ -z $selected ]]; then

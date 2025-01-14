@@ -99,3 +99,11 @@ alias pip="pip3"
 alias lsconda="conda env list"
 alias rmconda="source ~/.script/rmconda.sh"
 alias initconda="source ~/.script/initconda.sh"
+
+
+# ssh
+function ssh_data()
+{
+    export TERM="xterm-256color"
+    ssh huan1840@data.cs.purdue.edu
+}
