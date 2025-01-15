@@ -33,6 +33,11 @@ else
       echo ~/Downloads/;
       echo ~/dotfiles/;
       echo ~/.config/nvim/;
+      echo ~/cs240/;
+      echo ~/cs250/;
+      echo ~/cs252/;
+      echo ~/cs373/;
+      echo ~/cs408/;
     } | fzf)
   fi
 fi
