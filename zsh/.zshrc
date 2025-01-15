@@ -57,6 +57,10 @@ source $ZSH/oh-my-zsh.sh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7b8496"
 
 
+# increase history size
+export HISTSIZE=20000
+export SAVEHIST=20000
+
 # User configuration
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
@@ -65,8 +69,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7b8496"
 export EDITOR=nvim
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export DBUS_SESSION_BUS_ADDRESS='unix:path='$DBUS_LAUNCHD_SESSION_BUS_SOCKET
-# export PATH=/usr/local/anaconda3/bin:$PATH # for intel mac
-# export PATH=/opt/homebrew/anaconda3/bin:$PATH # for m series mac
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 export LDFLAGS="-L/usr/local/opt/llvm/lib -L/usr/local/opt/llvm/lib/c++ -L/usr/local/opt/llvm/lib -lunwind"
@@ -106,4 +108,17 @@ function ssh_data()
 {
     export TERM="xterm-256color"
     ssh huan1840@data.cs.purdue.edu
+}
+
+
+function ssh_xinu()
+{
+    export TERM="xterm-256color"
+    ssh huan1840@xinu18.cs.purdue.edu
+}
+
+function ssh_scholar()
+{
+    export TERM="xterm-256color"
+    ssh huan1840@scholar.rcac.purdue.edu
 }

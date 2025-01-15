@@ -18,20 +18,21 @@ else
       echo ~/Downloads/;
       echo ~/Desktop/;
       echo ~/resume/;
-      echo ~/dotfiles/;
       echo ~/test/;
+      echo ~/dotfiles/;
+      echo ~/.config/nvim/;
       find ~/Purdue -maxdepth 3 -type d;
+      find ~/coding -maxdepth 2 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
       # find ~/coding -maxdepth 2 -type d;
       # find ~/dotfiles -mindepth 1 -maxdepth 3 -type d;
-      find ~/coding -maxdepth 2 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
-      find ~/dotfiles -mindepth 1 -maxdepth 3 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
+      # find ~/dotfiles -mindepth 1 -maxdepth 3 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
     } | fzf)
   else
     selected=$({
       echo ~/;
       echo ~/Downloads/;
       echo ~/dotfiles/;
-      find ~/dotfiles -mindepth 1 -maxdepth 3 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
+      echo ~/.config/nvim/;
     } | fzf)
   fi
 fi
