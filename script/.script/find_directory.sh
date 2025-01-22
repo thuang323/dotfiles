@@ -17,6 +17,7 @@ if [[ $HOME = "/Users/taylorhuang" ]]; then
     echo ~/.config/nvim/;
     find ~/Purdue -maxdepth 3 -type d;
     find ~/coding -maxdepth 2 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
+    find ~/Notes/cs_notes -maxdepth 1 -type d;
     # find ~/dotfiles -mindepth 1 -maxdepth 3 -type d \( "${EXCLUDE_ARGS[@]:0:${#EXCLUDE_ARGS[@]}-1}" \) -prune -o -type d -print;
   } | fzf --height=90%)
 else
@@ -30,6 +31,7 @@ else
     echo ~/cs252/;
     echo ~/cs373/;
     echo ~/cs408/;
+    echo ~/cs440/;
   } | fzf --height=90%)
 fi
 

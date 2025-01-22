@@ -122,3 +122,9 @@ function ssh_scholar()
     export TERM="xterm-256color"
     ssh huan1840@scholar.rcac.purdue.edu
 }
+
+function ssh_pod()
+{
+    export TERM="xterm-256color"
+    ssh huan1840@pod0-0.cs.purdue.edu
+}
