@@ -32,6 +32,7 @@ else
     echo ~/cs373/;
     echo ~/cs408/;
     echo ~/cs440/;
+    echo ~/xinu-spring2025/;
   } | fzf --height=90%)
 fi
 
