@@ -18,6 +18,7 @@ HISTFILESIZE=50000
 # add to path
 export EDITOR=nvim
 export PATH="$HOME/usr/bin:$PATH"
+export PATH=${PATH}:/p/xinu/bin
 
 eval "$(starship init bash)"
 
