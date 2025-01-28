@@ -32,3 +32,49 @@ alias ts="~/.script/tmux/tmux_sessionizer.sh"
 alias sd="source ~/.script/find_directory.sh"         # find all directory under home in specific directory
 alias sud="source ~/.script/find_under_directory.sh"  # find all directory under current directory
 
+xinu_start() {
+xinu_connect() {
+    machine=$1
+    expected_output="connection '$machine', class 'quark', host 'xinuserver.cs.purdue.edu'"
+    
+    expect -c "
+    set timeout 60
+    # exp_internal 1
+    spawn cs-console $machine
+    expect \"$expected_output\"
+
+    send \"\x00\"
+    expect \"(command-mode) \"
+    send \"d\"
+    expect \"file: \"
+    send \"xinu.xbin\r\"
+
+    expect  \"cp-download complete\r\n\r\n\r\"
+    sleep 1
+    send \"\x00\"
+    expect \"(command-mode) \"
+    send \"p\"
+    expect \"boot menu options.\r\n\"
+    send \"\r\"
+
+    interact
+  "
+}
+
+status_output=$(cs-status -c quark)
+
+for i in {185..195}; do
+    machine="galileo$i"
+    
+    if echo "$status_output" | grep -q ".*$machine.* user= .*"; then
+        echo "$machine is free, attempting to connect..."
+
+        if [ $? -eq 0 ]; then
+            xinu_connect "$machine"
+            break
+        fi
+    else
+        echo "$machine is occupied or not available."
+    fi
+done
+}
