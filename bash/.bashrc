@@ -65,14 +65,11 @@ status_output=$(cs-status -c quark)
 
 for i in {185..195}; do
     machine="galileo$i"
-    
-    if echo "$status_output" | grep -q ".*$machine.* user= .*"; then
-        echo "$machine is free, attempting to connect..."
 
-        if [ $? -eq 0 ]; then
-            xinu_connect "$machine"
-            break
-        fi
+    if echo "$status_output" | grep -qE "$machine.*user= +time"; then
+        echo "$machine is free, attempting to connect..."
+        xinu_connect "$machine"
+        break;
     else
         echo "$machine is occupied or not available."
     fi
