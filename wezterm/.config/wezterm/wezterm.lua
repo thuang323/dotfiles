@@ -1,5 +1,5 @@
 local wezterm = require "wezterm"
-local colors = require "colors"
+local cyberdream = require "cyberdream"
 local act = wezterm.action
 
 local config = wezterm.config_builder()
@@ -30,6 +30,7 @@ local function tab_title(tab_info)
   return tab_info.active_pane.title
 end
 
+-- in general
 wezterm.on(
   "format-tab-title",
   function(tab, tabs, panes, config, hover, max_width)
@@ -47,7 +48,7 @@ wezterm.on(
 
     if tab.is_active then
       background = "#323233"
-      foreground = colors.fg
+      foreground = cyberdream.fg
     elseif hover then
       background = "#282829"
       foreground = "#ababab"
@@ -74,6 +75,7 @@ wezterm.on(
     }
   end
 )
+
 
 -- window and tab
 config.window_background_opacity = 0.93
@@ -109,23 +111,27 @@ config.font = wezterm.font_with_fallback {
 }
 
 
--- colors
+config.color_scheme_dirs = { "~/.config/wezterm/colors" }
+-- config.color_scheme = "nightfox"
+
+
+-- cyberdream colors
 config.bold_brightens_ansi_colors = "No"
 config.colors = { -- cyberdream
-  ansi = colors.ansi,
-  brights = colors.brights,
-  background = colors.bg,
-  foreground = colors.fg,
-  selection_bg = colors.grey,
+  ansi = cyberdream.ansi,
+  brights = cyberdream.brights,
+  background = cyberdream.bg,
+  foreground = cyberdream.fg,
+  selection_bg = cyberdream.grey,
   -- selection_bg = colors.selection_bg,
-  selection_fg = colors.selection_fg,
-  cursor_bg = colors.cursor_bg,
-  cursor_fg = colors.cursor_fg,
-  cursor_border = colors.cursor_border,
-  scrollbar_thumb = colors.grey,
-  split = colors.split,
-  visual_bell = colors.selection_bg,
-  indexed = colors.indexed,
+  selection_fg = cyberdream.selection_fg,
+  cursor_bg = cyberdream.cursor_bg,
+  cursor_fg = cyberdream.cursor_fg,
+  cursor_border = cyberdream.cursor_border,
+  scrollbar_thumb = cyberdream.grey,
+  split = cyberdream.split,
+  visual_bell = cyberdream.selection_bg,
+  indexed = cyberdream.indexed,
 }
 
 -- config.colors = { -- tokyonight day

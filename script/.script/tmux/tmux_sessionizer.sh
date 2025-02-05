@@ -40,7 +40,7 @@ else
       echo ~/cs373/;
       echo ~/cs408/;
       echo ~/cs440/;
-      echo ~/xinu-spring2025/;
+      echo ~/cs354/;
     } | fzf)
   fi
 fi
