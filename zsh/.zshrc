@@ -85,6 +85,7 @@ alias suf="source ~/.script/find_under_files.sh"  # find all files under current
 alias sd="source ~/.script/find_directory.sh"  # find all directory under home in specific directory
 alias sud="source ~/.script/find_under_directory.sh"  # find all directory under current directory
 alias initgradle="~/.script/init_gradle.sh"
+alias cs440_template="~/.script/school/cs440_template.sh"
 alias vi="nvim"
 alias g++="g++-13"
 alias gcc="gcc-13"
