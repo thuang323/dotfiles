@@ -96,4 +96,18 @@ if vim.g.vscode then
   map("n", "gr", function()
     vscode_call("editor.action.referenceSearch.trigger")
   end, opts)
+
+
+  -- GitHub Copilot Keybindings
+  map("i", "<M-e>", function()
+    vscode_call("editor.action.inlineSuggest.commit")
+  end, opts)
+
+  map("i", "<M-n>", function()
+    vscode_call("editor.action.inlineSuggest.trigger")
+  end, opts)
+
+  map("i", "<M-c>", function()
+    vscode_call("editor.action.inlineSuggest.hide")
+  end, opts)
 end
