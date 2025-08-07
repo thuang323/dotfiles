@@ -1,6 +1,12 @@
 if vim.g.vscode then
   local map = vim.keymap.set
+  local opt = vim.opt
   local opts = { noremap = true, silent = true }
+
+
+  -- search settings
+  opt.ignorecase = true
+  opt.smartcase = true
 
   local function vscode_call(command)
     vim.fn.VSCodeNotify(command)
@@ -34,9 +40,6 @@ if vim.g.vscode then
   map({ "n", "x" }, "<leader>Y", "\"+Y", { remap = true })
   map({ "n", "x" }, "<leader>x", "\"+x")
   map({ "n", "x" }, "<leader>X", "\"+X", { remap = true })
-
-  -- General keymaps
-  map("n", "<leader>nh", "<cmd>nohl<CR>") -- Remove search highlight
 
   -- Tab management
   map("n", "<leader>tn", function()

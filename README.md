@@ -35,6 +35,7 @@ brew install stow     # dotfiles manager
 brew install neofetch
 brew install jq
 brew install gradle
+brew install imagemagick
 ```
 
 ### Git
@@ -79,7 +80,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 
 # SketchyBar usage
 brew install --cask sf-symbols
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.31/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.35/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
 # go to sketchybar-app-font github to get the latest release
 ```
 
