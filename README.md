@@ -59,14 +59,11 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # ctrl + I to install all plugins
 ```
 
-### Window Manager & SketchyBar
+### Window Manager
 
 ```bash
 brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
-
-brew tap FelixKratz/formulae
-brew install sketchybar
 ```
 
 ### Fonts
@@ -80,8 +77,16 @@ brew install --cask font-jetbrains-mono-nerd-font
 
 # SketchyBar usage
 brew install --cask sf-symbols
+brew install --cask font-sf-mono
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.35/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
 # go to sketchybar-app-font github to get the latest release
+```
+
+### SketchyBar
+
+```bash
+# run this after install all the fonts and stow the script directory
+install_sketchybar
 ```
 
 ### Mac Utils
@@ -103,7 +108,6 @@ stow --restow "directory" # for restowing
 ## 🛠️ Developer tools
 
 - Arc (web browser)
-- Wezterm
 - Ghostty
 - VsCode
 - Docker Desktop
