@@ -69,7 +69,9 @@ alias tls="tmux ls"
 alias ts="~/.script/tmux/tmux_sessionizer.sh"
 alias install_sketchybar="~/.script/install_sketchybar.sh"
 
-# conda alias
+# dev alias
+alias python="/opt/homebrew/bin/python3.11"
+alias pip="/opt/homebrew/bin/pip3.11"
 alias lsconda="conda env list"
 alias rmconda="source ~/.script/rmconda.sh"
 alias initconda="source ~/.script/initconda.sh"

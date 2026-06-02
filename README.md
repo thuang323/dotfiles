@@ -78,7 +78,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 # SketchyBar usage
 brew install --cask sf-symbols
 brew install --cask font-sf-mono
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.35/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.62/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
 # go to sketchybar-app-font github to get the latest release
 ```
 

@@ -30,6 +30,9 @@ shift + alt - q : skhd -k "ctrl + cmd - q" # lock screen macro
 alt - b : skhd -k "alt - 0x7B" # jump backward a word
 alt - f : skhd -k "alt - 0x7C" # jump forward a word
 
+
+# ctrl + shift - 3 : skhd -k "cmd + shift - 3"
+
 # rotate layout clockwise
 shift + alt - r : yabai -m space --rotate 270
 
